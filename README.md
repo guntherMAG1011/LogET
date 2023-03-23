@@ -1,0 +1,2 @@
+# LogET
+c++ logging library.
