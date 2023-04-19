@@ -1,28 +1,9 @@
 #pragma once
 
-namespace LogET
+#include <LogET/logfun.h>
+
+class logET    // Factory Class
 {
-    enum LogLevel
-    {
-        DEBUG = 0,
-        WARN = 1,
-        INFO = 2,
-        ERROR = 3,
-        FATAL = 4,
-        OFF = 5
-    };
-
-    class logger
-    {
-    private:
-        LogLevel nLevel = INFO;
     public:
-        logger(){}
-        logger(LogLevel level)
-        {
-            nLevel = level;
-        }
-
-        LogLevel getLogLevel();
-    };
-}
+        logger getLogger(logLevel level = INFO, logType type = CONSOLE);
+};
