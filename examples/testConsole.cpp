@@ -1,11 +1,12 @@
+#include <iostream>
+
 #include <LogET/LogET.h>
 
 int main()
 {   
-    logET factory = logET();
-    logger l = factory.getLogger();
-    l.info("info message");
-    l.debug("debug message");
-    l.fatal("fatal message");
+    logger* l = getLogger(logType::CONSOLE, logLevel::DEBUG);
+    l->info("info message");
+    l->fatal("fatal message");
+    l->warn("warn message");
     return 0;
 }
